@@ -1,6 +1,8 @@
-@import './base/reset';
-
 @import './utils/variable';
+@import './utils/mixins';
+
+@import './base/reset';
+@import './base/typography';
 
 @import './components/attributes';
 @import './components/card';
