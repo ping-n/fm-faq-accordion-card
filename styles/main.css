@@ -43,12 +43,44 @@ body {
 }
 
 .card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+      grid-template-areas: 'image  content';
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fff;
   width: 50%;
   height: 55%;
+  margin: 0;
   border-radius: 2rem;
-  -webkit-box-shadow: 0.2rem 0.2rem 5rem rgba(0, 0, 0, 0.2);
-          box-shadow: 0.2rem 0.2rem 5rem rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 0.4rem 0.8rem 0 rgba(0, 0, 0, 0.2), 0 0.6rem 2rem 0 rgba(0, 0, 0, 0.19);
+  overflow: hidden;
+}
+
+.card__bg {
+  position: relative;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+}
+
+.card__bg--box {
+  position: absolute;
+}
+
+.card__bg--mobile {
+  display: none;
+}
+
+.card__contents {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: content;
 }
 
 .app {
