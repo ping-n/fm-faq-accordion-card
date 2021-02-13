@@ -52,6 +52,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-image: url("../../images/bg-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 82rem 90rem;
+  background-position: -43rem -28rem;
   background-color: #fff;
   width: 50%;
   height: 55%;
@@ -63,7 +67,6 @@ body {
 }
 
 .card__bg {
-  position: relative;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: image;
@@ -71,6 +74,14 @@ body {
 
 .card__bg--box {
   position: absolute;
+  -webkit-transform: translateY(13rem) translateX(-9.5rem);
+          transform: translateY(13rem) translateX(-9.5rem);
+  z-index: 2;
+}
+
+.card__bg--desktop {
+  -webkit-transform: translateX(-9rem);
+          transform: translateX(-9rem);
 }
 
 .card__bg--mobile {
@@ -81,6 +92,15 @@ body {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: content;
+  margin-right: 10rem;
+}
+
+.card__texts {
+  padding: 1rem 0;
+}
+
+.card__line {
+  border: 0.5px solid #e7e7e9;
 }
 
 .app {
