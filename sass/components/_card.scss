@@ -1,6 +1,6 @@
 .card {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas: 'image  content';
   gap: 2rem;
   align-items: center;
@@ -43,13 +43,47 @@
   &__contents {
     grid-area: content;
     margin-right: 10rem;
+    width: 80%;
+    height: 80%;
   }
 
   &__texts {
     padding: 1rem 0;
+    border-bottom: 0.5px solid $divider-color;
   }
 
-  &__line {
-    border: 0.5px solid $divider-color;
+  &__questions {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding: 1rem 0;
+
+    &.active {
+      font-weight: 700;
+      .icon-arrow {
+        transform: rotate(180deg);
+      }
+    }
+
+    &:hover {
+      color: $color-secondary;
+      cursor: pointer;
+    }
+    .icon-arrow {
+      float: right;
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__answer {
+    display: none;
+    padding: 0.8rem 0;
+    font-size: 1.2rem;
+    color: $text-color-2;
+    height: 0;
+
+    &.active {
+      display: block;
+      height: auto;
+    }
   }
 }

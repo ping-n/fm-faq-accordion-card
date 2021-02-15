@@ -1,3 +1,27 @@
+.u-center-text {
+  text-align: center !important;
+}
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important;
+}
+
+.u-margin-bottom-medium {
+  margin-bottom: 2rem !important;
+}
+
+.u-margin-bottom-big {
+  margin-bottom: 4rem !important;
+}
+
+.u-margin-top-big {
+  margin-top: 8rem !important;
+}
+
+.u-margin-top-huge {
+  margin-top: 10rem !important;
+}
+
 /* Reset */
 *,
 *::after,
@@ -25,10 +49,11 @@ body {
 }
 
 .heading-secondary {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #1d1e35;
   text-transform: uppercase;
+  padding-top: 1rem;
 }
 
 .attribution {
@@ -39,14 +64,20 @@ body {
 }
 
 .attribution a {
-  color: #3e52a3;
+  font-weight: 700;
+  text-decoration: none;
+  color: limegreen;
+}
+
+.attribution a:active, .attribution a:hover {
+  color: #f47c57;
 }
 
 .card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
       grid-template-areas: 'image  content';
   gap: 2rem;
   -webkit-box-align: center;
@@ -93,14 +124,54 @@ body {
   -ms-grid-column: 2;
   grid-area: content;
   margin-right: 10rem;
+  width: 80%;
+  height: 80%;
 }
 
 .card__texts {
   padding: 1rem 0;
+  border-bottom: 0.5px solid #e7e7e9;
 }
 
-.card__line {
-  border: 0.5px solid #e7e7e9;
+.card__questions {
+  font-size: 1.6rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+.card__questions.active {
+  font-weight: 700;
+}
+
+.card__questions.active .icon-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.card__questions:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.card__questions .icon-arrow {
+  float: right;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.card__answer {
+  display: none;
+  padding: 0.8rem 0;
+  font-size: 1.2rem;
+  color: #787887;
+  height: 0;
+}
+
+.card__answer.active {
+  display: block;
+  height: auto;
 }
 
 .app {
